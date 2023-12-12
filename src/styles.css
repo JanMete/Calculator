@@ -20,6 +20,7 @@ body {
   border: 1px solid white;
   outline: none;
   background-color: rgba(255, 255, 255, 0.75);
+  color: black;
 }
 .calculator-grid > button:hover,
 .calculator-grid > button:focus {
@@ -46,4 +47,22 @@ body {
 .output .current-operant {
   color: white;
   font-size: 2.5rem;
+}
+@media screen and (max-width: 600px) {
+  body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .calculator-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 1fr);
+    height: 90vh;
+    margin: auto;
+  }
+  .calculator-grid > button:hover,
+  .calculator-grid > button:focus {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
 }
